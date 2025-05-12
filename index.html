@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        html,body {
+            height: 100vh;
+            width: 100%;
+            background-color: #010614;
+            color: #b9b9b9;
+        }
+        .container{
+            width: 50%;
+            height: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .main-heading{
+            margin-top: 40px;
+            margin-bottom: 5px;
+            font-size: 60px;
+        }
+        .main-heading span{
+            color: #ff4800;
+        }
+        form{
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        form input[type='text']{
+            
+            font-size: 16px;
+            padding: 8px;
+            height: 100%;
+            background-color: #313131;
+            color: #fff;
+            border: 0;
+            width: 100%;
+        }
+        form input[type='text']:focus{
+            outline: none;
+        }
+        form input[type = 'submit']{
+            height: 100%;
+            font-size: 16px;
+            padding: 8px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 0;
+        }
+        .sub-heading{
+            border-bottom: 1px dashed rgb(88, 88, 88);
+            margin: 15px 0;
+            padding: 15px 0;
+            width: 350px;
+        }
+        .todo-container{
+            overflow-y: auto;
+            list-style-type: none;
+            height: 450px;
+            padding-bottom: 2rem;
+        }
+        .todo-container li{
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .todo-container li input[type='checkbox']{
+            cursor: pointer;
+        }
+        .todo-container li label{
+            cursor: pointer;
+            user-select: none;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        footer a{
+            color: #ff4800;
+        }
+        @media screen and (max-width: 720px) {
+            .container{
+                width: 100%;
+                padding: 0 15px;
+            }
+            .sub-heading{
+                width: 100%;
+            }
+            form{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">TODO<span>:</span></h1>
+        <form action="" id="todo-form">
+            <input type="text" name="" id="input-field" placeholder="Hii!">
+            <input type="submit" value="Add" id="submit">
+        </form>
+        <p class="sub-heading">Your Todo's:</p>
+        <ul id="todo-container" class="todo-container">
+            <li> <input type="checkbox" name="d" id="d" checked><label for="d">Lorem, ipsum dolor.</label></li>
+        </ul>
+    </div>
+    <footer>
+        made with &#x2665;	by <a href="https://www.devpankaj.com" cors>Pankaj</a>
+    </footer>
+
+    <!-- scirpt -->
+    <script src="/dest/main.js"></script>
+</body>
+</html>
